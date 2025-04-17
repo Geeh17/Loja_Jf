@@ -1,17 +1,16 @@
 "use client";
 
-import { WhatsappLogo } from '@phosphor-icons/react/dist/ssr'
-import mosImg from '../../../public/bg-hero.webp'
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-
+import { WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
+import mosImg from '../../../public/bg-hero.webp';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export function Hero() {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleComprar = () => {
-    router.push('/checkout')
-  }
+    router.push('/checkout');
+  };
 
   return (
     <section className="bg-[#FFDE08] text-white relative overflow-hidden">
@@ -42,28 +41,17 @@ export function Hero() {
               de forma ecológica, rápida e sem cheiro.
             </p>
 
-            {/* Contêiner flex para exibir os botões lado a lado */}
-            <div className="flex flex-wrap items-center gap-2">
-              {/* Botão de Contato via WhatsApp */}
+            <div className="flex items-center gap-3">
               <a
                 data-aos="fade-up"
                 data-aos-delay="500"
                 target="_blank"
-                href="https://wa.me/556799998800?text=Olá vim pelo site e gostaria de mais informações"
-                className="bg-green-500 px-5 py-2 rounded-md font-semibold flex items-center justify-center w-fit gap-2"
+                rel="noopener noreferrer"
+                href="https://wa.me/5532999905289?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-lg flex items-center gap-2 transition-colors duration-300"
               >
                 <WhatsappLogo className="w-5 h-5" />
                 Contato via WhatsApp
-              </a>
-
-              {/* Botão Comprar Agora com o mesmo padrão (cor e estilo) */}
-              <a
-                data-aos="fade-up"
-                data-aos-delay="700"
-                onClick={handleComprar}
-                className="bg-green-500 px-5 py-2 rounded-md font-semibold flex items-center justify-center w-fit gap-2 cursor-pointer"
-              >
-                Comprar Agora
               </a>
             </div>
 
@@ -77,7 +65,7 @@ export function Hero() {
           <div className="hidden md:block h-full relative">
             <Image
               src={mosImg}
-              alt="Foto do dog"
+              alt="Foto do mosquito"
               className="object-contain"
               fill
               sizes="(max-width: 768px) 0vw, 50vw"
@@ -88,5 +76,5 @@ export function Hero() {
         </article>
       </div>
     </section>
-  )
+  );
 }
