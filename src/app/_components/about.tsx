@@ -33,8 +33,7 @@ export function About() {
     const urlWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
     window.open(urlWhatsapp, '_blank');
 
-    // Redireciona para o checkout (coloque o link do Mercado Pago)
-    window.location.href = 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=SUA_PREFERENCE_ID';
+    window.location.href = 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=61069861';
   };
 
   return (
@@ -92,7 +91,7 @@ export function About() {
             <div className="flex flex-wrap items-center gap-2">
               <a
                 target="_blank"
-                href="https://wa.me/5532999905289?text=Olá%2C+vim+pelo+site+e+gostaria+de+mais+informações"
+                href="https://wa.me/5532991481582?text=Olá%2C+vim+pelo+site+e+gostaria+de+mais+informações"
                 className="bg-[#22C55E] text-white flex items-center justify-center w-fit gap-2 px-4 py-2 rounded-md"
               >
                 <WhatsappLogo className="w-5 h-5 text-white" />
